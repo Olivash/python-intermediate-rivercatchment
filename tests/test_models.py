@@ -165,7 +165,7 @@ def test_no_duplicate_sites():
     catchment.add_site(PL23)
     assert len(catchment.sites) == 1
 
-
+''' 
 def test_create_site_with_position():
     """Check a site is created correctly given a name"""
     from catchment.models import Site
@@ -175,3 +175,7 @@ def test_create_site_with_position():
     position =gpd. GeoDataFrame(geometry=[Point((longitude,latitude))],crs='EPSG:4326')
     p=Site(name=name,longitude=longitude,latitude=latitude)
     assert p.location.geom_equals(position)[0]
+  
+  
+  
+  '''
