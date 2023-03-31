@@ -7,8 +7,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest,windows-latest]
-        python-version: ["3.9","3.10"]
+        os: [ubuntu-latest,macos-latest,windows-latest]
+        python-version: ["3.9","3.10","3.11"]
 
     runs-on: ${{ matrix.os }}
 
@@ -24,7 +24,7 @@ jobs:
     - name: Install python dependencies
       run: |
         python3 -m pip install --upgrade pip
-        pip3 install -r requirements.txt
+        pip3 install -r ci_requirements.txt
       
 
     - name: Test with PyTest
